@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "block-memory-mcp"
+version = "0.1.0"
+description = "Block-based dynamic coefficient recall memory — an MCP server with FTS5 search, temporal decay, and automatic dedup"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+]
+authors = [
+    {name = "Lucas Lu"},
+]
+keywords = ["mcp", "memory", "fts5", "recall", "coefficient", "block"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+
+[project.scripts]
+block-memory = "block_memory.server:main"
+
+[project.urls]
+Homepage = "https://github.com/lucaslu/block-memory-mcp"
+Repository = "https://github.com/lucaslu/block-memory-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/block_memory"]
