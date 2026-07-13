@@ -14,7 +14,7 @@ LLMs forget between sessions. Block Memory gives them a persistent memory system
 ## Quick Start
 
 ```bash
-pip install block-memory-mcp
+pip install git+https://github.com/Lucasi-hub/block-memory-mcp.git
 ```
 
 ## Configuration
@@ -36,8 +36,16 @@ Add to `~/.claude/.mcp.json`:
 ```
 
 ### Claude Desktop
-
-See `examples/claude_desktop_config.json`.
+{
+    "mcpServers": {
+      "block-memory": {
+        "type": "stdio",
+        "command": "python3",
+        "args": ["-m", "block_memory"],
+        "env": {}
+      }
+    }
+}
 
 ### Custom Database Path
 
