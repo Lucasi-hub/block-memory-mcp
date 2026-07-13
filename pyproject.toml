@@ -31,8 +31,8 @@ classifiers = [
 block-memory = "block_memory.server:main"
 
 [project.urls]
-Homepage = "https://github.com/lucaslu/block-memory-mcp"
-Repository = "https://github.com/lucaslu/block-memory-mcp"
+Homepage = "https://github.com/Lucasi-hub/block-memory-mcp"
+Repository = "https://github.com/Lucasi-hub/block-memory-mcp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/block_memory"]
